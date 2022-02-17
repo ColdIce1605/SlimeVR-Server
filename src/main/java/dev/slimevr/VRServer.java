@@ -92,7 +92,7 @@ public class VRServer extends Thread {
 			tasks.add(() -> steamVRInput.startBridge());
 			bridges.add(steamVRInput);
 			//*/
-			LinuxNamedPipeBridge driverBridge = new LinuxNamedPipeBridge(hmdTracker, "steamvr", "SteamVR Driver Bridge", "\\\\.\\pipe\\SlimeVRDriver", shareTrackers);
+			LinuxNamedPipeBridge driverBridge = new LinuxNamedPipeBridge(hmdTracker, "steamvr", "SteamVR Driver Bridge", "/tmp/pipe-SlimeVRDriver", shareTrackers);
 			tasks.add(() -> driverBridge.startBridge());
 			bridges.add(driverBridge);
 		}

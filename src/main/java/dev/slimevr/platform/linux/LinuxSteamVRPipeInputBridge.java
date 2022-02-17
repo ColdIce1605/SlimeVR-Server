@@ -30,7 +30,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class LinuxSteamVRPipeInputBridge extends Thread implements Bridge {
 
 	private static final int MAX_COMMAND_LENGTH = 2048;
-	public static final String PipeName = "\\\\.\\pipe\\SlimeVRInput";
+	public static final String PipeName = "/tmp/pipe-SlimeVRInput";
 
 	private final byte[] buffArray = new byte[1024];
 	private final VRServer server;

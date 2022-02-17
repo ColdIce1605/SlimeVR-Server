@@ -22,8 +22,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class LinuxNamedPipeVRBridge extends Thread implements Bridge {
 
 	private static final int MAX_COMMAND_LENGTH = 2048;
-	public static final String HMDPipeName = "\\\\.\\pipe\\HMDPipe";
-	public static final String TrackersPipeName = "\\\\.\\pipe\\TrackPipe";
+	public static final String HMDPipeName = "/tmp/pipe-HMDPipe";
+	public static final String TrackersPipeName = "/tmp/pipe-TrackPipe";
 	public static final Charset ASCII = Charset.forName("ASCII");
 
 	private final byte[] buffArray = new byte[1024];
